@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="container">
+      <div class="line" id="line-one"></div>
+      <div class="line" id="line-two"></div>
+      <div class="line" id="line-three"></div>
+    </div>
+  </body>
+  <script>
+    document.getElementById("container").addEventListener("click", animate);
+    function animate() {
+      console.log("test");
+      const lineOne = document.getElementById("line-one");
+      const lineTwo = document.getElementById("line-two");
+      const lineThree = document.getElementById("line-three");
+      if (lineOne.classList.contains("animate-line-one-down")) {
+        lineOne.classList.remove("animate-line-one-down");
+        lineOne.classList.add("animate-line-one-up");
+        lineTwo.classList.remove("animate-line-two-remove");
+        lineTwo.classList.add("animate-line-two-add");
+        lineThree.classList.remove("animate-line-three-up");
+        lineThree.classList.add("animate-line-three-down");
+      } else {
+        lineOne.classList.add("animate-line-one-down");
+        lineOne.classList.remove("animate-line-one-up");
+        lineTwo.classList.add("animate-line-two-remove");
+        lineTwo.classList.remove("animate-line-two-add");
+        lineThree.classList.add("animate-line-three-up");
+        lineThree.classList.remove("animate-line-three-down");
+      }
+    }
+  </script>
+</html>

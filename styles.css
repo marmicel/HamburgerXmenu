@@ -1,0 +1,138 @@
+body {
+  background: black;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#container {
+  width: 50px;
+  height: 50px;
+  /* background: green; */
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+
+.line {
+  width: 80%;
+  height: 10%;
+  background: red;
+  border-radius: 20px;
+}
+
+#line-one {
+  transform: rotate(0deg);
+  transform-origin: 100% 50%;
+  margin-right: 0%;
+  width: 95%;
+}
+
+.animate-line-one-down {
+  animation-duration: 0.5s;
+  animation-name: line-one-animation-down;
+  animation-fill-mode: forwards;
+}
+.animate-line-one-up {
+  animation-duration: 0.5s;
+  animation-name: line-one-animation-up;
+  animation-fill-mode: forwards;
+}
+
+#line-two {
+  opacity: 1;
+  width: 95%;
+}
+
+.animate-line-two-remove {
+  animation-duration: 0.5s;
+  animation-name: line-two-animation-remove;
+  animation-fill-mode: forwards;
+}
+
+.animate-line-two-add {
+  animation-duration: 0.5s;
+  animation-name: line-two-animation-add;
+  animation-fill-mode: forwards;
+}
+
+#line-three {
+  transform: rotate(0deg);
+  transform-origin: 100% 50%;
+  width: 95%;
+  margin-right: 0%;
+}
+
+.animate-line-three-up {
+  animation-duration: 0.5s;
+  animation-name: line-three-animation-up;
+  animation-fill-mode: forwards;
+}
+
+.animate-line-three-down {
+  animation-duration: 0.5s;
+  animation-name: line-three-animation-down;
+  animation-fill-mode: forwards;
+}
+
+@keyframes line-one-animation-down {
+  from {
+    transform: rotate(0deg);
+    margin-right: 0;
+  }
+  to {
+    transform: rotate(-45deg);
+    margin-right: 30%;
+  }
+}
+
+@keyframes line-one-animation-up {
+  from {
+    transform: rotate(-45deg);
+    margin-right: 30%;
+  }
+  to {
+    transform: rotate(0deg);
+    margin-right: 0%;
+  }
+}
+
+@keyframes line-two-animation-remove {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes line-two-animation-add {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes line-three-animation-up {
+  from {
+    transform: rotate(0deg);
+    margin-right: 0;
+  }
+  to {
+    transform: rotate(45deg);
+    margin-right: 30%;
+  }
+}
+
+@keyframes line-three-animation-down {
+  from {
+    transform: rotate(45deg);
+    margin-right: 30%;
+  }
+  to {
+    transform: rotate(0deg);
+    margin-right: 0;
+  }
+}
